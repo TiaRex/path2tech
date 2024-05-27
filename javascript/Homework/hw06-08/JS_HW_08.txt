@@ -1,0 +1,8 @@
+Steps To Complete Assignment:
+1. In the function shop create an object called store_details, create a key value pair of items, and set the value to an array of items, with at least 3 items.
+2. In the store_details object add another key value pair of sales, and set the value to 0.
+3. In the store_details object create a function called add_item, move the functionality from the add_item function to this function. To be able to add to the items array in this object use "this.items.push"
+4. In the store_details object create a function called bought_item, move the functionality from the bough_item function into this array, then in if statement after you call the .splice method make sure to increment sales by 1.
+5. Where you call add_item and bought_item in your store function use the store_details.add_item and store_details.bought_item instead.
+6. Once you are done refactoring the code, remove the functions add_item and bought_item.
+6. Add a console.log statement to that says "Today we had ${store_details.sales} sales!"

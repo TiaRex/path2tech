@@ -1,0 +1,8 @@
+Steps To Complete Assignment:
+1. Create a function call shop
+2. Create a variable called items and set it to an array of at least 3 items.
+3. Create a function called add_item, this function needs to take two parameters, items (which is an array), and item. Inside the add_item function use the .push method to add the item to the items array.
+4. Inside the shop function call the add_item function 5 times to add a unique item to the items array
+5. Create a function called bought_item, this function needs to take two arguments, items and item. Use the .splice and either the .findIndex or .indexOf methods to remove a specific item from this array. If the item exists call the splice method, if the item does not exist console.log a message to let the user know that the item does not exist.
+6. Call the bought_item function in your shop method 2 times, the first time you call it pass a legitimate item from the store, the second time you call this method pass an item that does not exist in the store.
+7. At the end of the shop function console.log a message saying thank you for shopping
