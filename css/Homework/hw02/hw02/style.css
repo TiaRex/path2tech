@@ -1,0 +1,25 @@
+/* Tia Truong 04/08/2024 */
+/* Adjacent Sibling Combinator (+) */
+h3 + p {
+    font-style: italic;
+}
+
+/* General Sibling Combinator (~) */
+h3 ~ p {
+    color:darkred;
+}
+
+/* Child Combinator (>) */
+.spell-chapter > h2 {
+    color: blueviolet;
+}
+
+/* Descendant Combinator ( ) */
+.spell {
+    background-color: rgb(231, 201, 255);
+    border-style: ridge;
+    padding: 10px;
+    border-width: thin;
+    border-radius: 10px;
+}
+

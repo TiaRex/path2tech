@@ -1,0 +1,46 @@
+h1 {
+    color:rebeccapurple;
+}
+p {
+    color:rgb(134, 103, 243);
+}
+.tech {
+    color:peru;
+}
+.fashion {
+    color:darkgoldenrod;
+}
+.caption {
+    color:rgb(140, 141, 155);
+}
+#heading {
+    background-color:plum;
+    padding: 25px;
+    border-style: double;
+    border-radius: 10px;
+    text-align: center;
+}
+#main-content {
+    border-style: dotted;
+    text-align: center;
+    border-width: thin;
+}
+#category-one {
+    background-color: rgb(221, 185, 255);
+    border-style: solid;
+    padding: 10px;
+}
+#category-two {
+    background-color: rgb(221, 185, 255);
+    border-style: solid;
+    padding: 10px;
+}
+#foot {
+    background-color: rgb(60, 0, 109);
+    border-style: ridge;
+    border-width: thin;
+    border-radius: 25px;
+}
+* {
+    color:darkkhaki;
+}

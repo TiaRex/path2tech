@@ -1,0 +1,4 @@
+Steps to complete this assignment:
+1. Create a function called magic_eight_ball, this function needs to take a parameter called number_result.
+2. In the magic_eight_ball function use a switch case on the number_result parameter to handle the cases between 1-8, in each case console.log a different message, the default case should console.log the message "Not a valid case please use a number between 1 and 8"
+3. Inside the app function call the magic_eight_ball function and pass the random_number variable as the argument. Make sure to remove the console.log that is inside the app function

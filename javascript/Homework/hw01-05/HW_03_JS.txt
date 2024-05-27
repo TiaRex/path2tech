@@ -1,0 +1,4 @@
+Steps to complete this assignment:
+1. After the last console.log statement, create a constant variable called random number, use the Math.random and Math.round functions to return a number between 1 and 8 and set the result to this variable, HINT at the number 1 at the end of the equation.
+2. Create a new console.log statement and write the following code: 'console.log(`The answer to your question is ${random_number === 1 ? 'Yes' : 'No'});'
+Bonus: Check if random number is even, if it is even then print 'Yes', if the number is odd then print 'No'

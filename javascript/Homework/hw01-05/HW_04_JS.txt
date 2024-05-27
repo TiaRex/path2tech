@@ -1,0 +1,9 @@
+Steps to complete this assignment:
+1. create a function called app, this function will be blank for right now, and will be a container for the rest of our application.
+2. Create a function called greeting, in this function move the code from lines 1-6 into this function.
+3. In the greeting function pass three arguments, first_name, last_name, and question respectively. Then inside this function remove the lines that declare the variables first_name, last_name, and question
+4. Create a function called get_random_number, in this function move the variable random_number inside this function and return the value at the end of the function
+5. In app call the greeting function, pass your first name, last name, and question respectively.
+6. In app create a constant random_number variable and set it to get_random_number()
+7. Move 'console.log(`The answer to your question is: ${random_number === 1 ? 'Yes' : 'No'}`);' inside the app function
+8. Call the app function at the end of the code file

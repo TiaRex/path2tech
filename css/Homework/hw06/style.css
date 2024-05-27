@@ -1,0 +1,15 @@
+/* Tia Truong 04/22/2024 */
+.box-model {
+    background-color: whitesmoke;
+    border: solid black 2px;
+    border-radius: 20px;
+    height: 280px;
+    width: 280px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+p {
+    padding-left: 15px;
+    padding-top: 15px;
+}

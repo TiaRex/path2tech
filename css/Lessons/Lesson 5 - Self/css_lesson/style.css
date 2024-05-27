@@ -1,0 +1,42 @@
+/* Tia Truong 04/18/2024 */
+body {
+  margin: 0;
+  padding: 0;
+}
+.add-cart-btn {
+  background-color: #3D8168;
+  color: white;
+}
+.add-btn-text {
+  font-size: 1.125rem;
+}
+.category, .description {
+  color: #6C7289;
+  font-size: 1.125rem;
+}
+.discount {
+  color: #3D8168;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f2e9e2;
+}
+.product-card {
+  background-color: white;
+}
+.strike {
+  color: #6C7289;
+  text-decoration: line-through;
+}
+.title {
+  font-size: 2.25rem;
+}
+.category, .description, .strike, .add-btn-text {
+  font-family: 'Montserrat', sans-serif;
+}
+.description, .discount {
+  font-family: 'Fraunces', sans-serif;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Preference Form</title>
+</head>
+<body>
+    <header>
+        <h1>Tia Truong</h1>
+        My name is Tia and I'm an aspiring fullstack engineer. I moved to Austin, TX from Minneapolis, MN to
+        further pursue my career in tech!
+    </header>
+
+    <form>
+        <div id="food-preferences">
+            <h1>Food Preferences</h1>
+            <fieldset>
+                <legend>Select your dietary preferences:</legend>
+                <label for="option-one">
+                    <input type="checkbox" name="option" id="option-one">
+                    Vegetarian 
+                </label><br>
+                <label for="option-two">
+                    <input type="checkbox" name="option" id="option-two">
+                    Vegan
+                </label><br>
+                <label for="option-three">
+                    <input type="checkbox" name="option" id="option-three">
+                    Gluten-Free
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Select your favorite cuisine:</legend>
+                <label for="cuisine-one">
+                    <input type="radio" name="cuisine" id="cuisine-one">
+                    Italian
+                </label><br>
+                <label for="cuisine-two">
+                    <input type="radio" name="cuisine" id="cuisine-two">
+                    Mexican
+                </label><br>
+                <label for="cuisine-three">
+                    <input type="radio" name="cuisine" id="cuisine-three">
+                    Asian
+                </label>
+            </fieldset>
+
+            <label for="favorite_food">
+                Favorite Food: <input type="text" name="favorite_food" id="favorite_food" placeholder="Enter your favorite food">
+            </label><br>
+            <label for="additional_notes"> Additional Notes:<br>
+                <textarea name="additional_notes" input type="text" name="additional_notes id="additional_notes
+                placeholder="Add any specific dietary requirements or comments"></textarea>
+            </label><br>
+            <label for="meals_per_day">
+                Number of Meals Per Day: <input type="number" name="meals_per_day" id="meals_per_day">
+            </label><br>
+            <label for="favorite_dish">
+                Favorite Dish (Max 10 characters): <input type="text" name="favorite_dish" id="favorite_dish" maxlength="10">
+            </label><br>
+            <label for="unavailable-food">
+                Unavailable Food Item: <input type="text" name="unavailable-food" id="unavailable-food" placeholder="Out of Stock" disabled>
+            </label><br>
+            <label for="read_only_info">
+                Read-only Information: <input type="text" name="read_only_info" id="read_only_info" placeholder="You can only read this" readonly>
+            </label><br>
+            <label for="calorie_count">Total Calories Consumed:<br>
+                <input type="range" name="calorie_count" id="calorie_count" min="0" max="5000" value="2500">
+                Calories<br>
+            </label>
+            <label for="beverage_type">Preferred Beverage:
+                <select name="beverage_type" id="beverage_type">
+                    <option value="Water">Water</option>
+                    <option value="Soda">Soda</option>
+                    <option value="Tea">Tea</option>
+                    <option value="Coffee">Coffee</option>
+                </select>
+            </label><br>
+
+            <label for="alcoholic-beverage">Alcoholic Beverage:
+                <select name="alcoholic-beverage" id="alcoholic-beverage">
+                    <optgroup label="Non-alcoholic Drinks">
+                        <option value="Mocktail">Mocktail</option>
+                    </optgroup>
+                    <optgroup label="Alcoholic Drinks">
+                        <option value="Beer">Beer</option>
+                        <option value="Wine">Wine</option>
+                    </optgroup>
+                </select>
+            </label>
+            <div id="submit">
+                <button type="button" onclick="">Submit</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

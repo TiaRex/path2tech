@@ -1,0 +1,6 @@
+Steps to complete this assignment:
+1. Under the last_name variable and create a constant full name variable, use template literals to concatenate the first and last name variables, ex: 'const full_name = `${first_name} ${last_name}`;'
+2. Change the code in the last console.log statement to use template literals instead of string concatentation. ex: 'console.log(`Hello my name is ${first_name} ${last_name} and my question is: ${question});'
+3. In the final console.log use the full_name variable instead of the first and last name variables: ex: 'console.log(`Hello my name is ${full_name}....`);'
+4. In the final console.log use the .toUpperCase() method on question, ex: 'console.log(`... ${question.toUpperCase()`});'
+5. In the final console.log use "\n" to create a new line after "my question is:", ex: 'console.log(`... my question is:\n...`);'

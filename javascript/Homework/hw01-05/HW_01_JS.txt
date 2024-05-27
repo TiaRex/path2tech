@@ -1,0 +1,6 @@
+Steps to complete this assignment:
+1. In the first line of "index.js" write 'console.log("Welcome to this magic eight ball application");'
+2. Create a constant variable called first name and set it as your first name: 'const first_name = "your name goes here";'
+3. Create a constant variable called last name and set it as your last name: 'const last_name = "your name goes here";'
+4. Create a variable using let called question and set it to a question: 'let question = "your question goes here";'
+5. Write a console.log statement that says "Hello my name is {first name} {last name} and my question is: {question}", ex: 'console.log("Hello my name is " + first_name + " " + last_name + " and my question is " + question);'
