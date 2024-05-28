@@ -2,10 +2,9 @@
 
 let fruits = ['apple', 'banana', 'cherry', 'date', 'elderberry'];
 
-console.log(____);
+console.log(fruits[1]);
 
 // # replace the element containing 'date' with 'blueberry' and print the new array
+fruits[3] = "blueberry";
 
-// # replace element here
-
-console.log(`Updated array: ${___}`);
+console.log(`Updated array: ${fruits}`);
