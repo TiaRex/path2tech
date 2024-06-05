@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function WeatherData(props) {
+export default function WeatherData({list}) {
   return (
     <>
-      {props.list.map((item) => (
-      <div className='weather-card'>
+      {list.map((item) => (
+      <div key={item.day} className='weather-card'>
         <p>{item.day}</p>
         <p>{item.temperature}</p>
         <p>{item.condition}</p>

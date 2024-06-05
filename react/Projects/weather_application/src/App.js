@@ -22,10 +22,14 @@ const weatherData = [
 ];
 
 function App() {
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log('Submitting')
+  }
   return (
     <div id='main' className="container">
       {/* Search Bar Component */}
-      <SearchBar/>
+      <SearchBar handleSubmit={handleSubmit}/>
       {/* Iterating through array */}
       <WeatherData list={weatherData}/>
     </div>
