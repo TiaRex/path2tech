@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function SearchBar({handleSubmit}) {
-  const [searchTerm, setSearchTerm] = useState('');
-  function handleChange(event) {
-    setSearchTerm(event.target.value);
-  }
+function SearchBar({ handleSubmit, searchTerm, handleChange }) {
   return (
     <section className='search-bar-container'>
       <form onSubmit={handleSubmit}>
