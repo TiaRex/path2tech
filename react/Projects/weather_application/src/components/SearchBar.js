@@ -13,6 +13,7 @@ function SearchBar({ handleSubmit, searchTerm, handleChange }) {
           name='search-city'
           className='search-city'
           onChange={handleChange}
+          value={searchTerm}
           />
         </label>
         <button type='submit' className='submit-search-city'>

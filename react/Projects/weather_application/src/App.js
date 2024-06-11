@@ -23,7 +23,7 @@ const weatherData = [
 ];
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('Stockton, CA');
   function handleChange(event) {
     setSearchTerm(event.target.value);
   }
@@ -37,7 +37,7 @@ function App() {
       <SearchBar handleSubmit={handleSubmit} searchTerm=
       {searchTerm} handleChange={handleChange}/>
       {/* Iterating through array */}
-      <WeatherData list={weatherData}/>
+      <WeatherData list={weatherData} searchTerm={searchTerm}/>
     </div>
   );
 }
