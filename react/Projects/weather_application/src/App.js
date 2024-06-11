@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import WeatherData from './components/WeatherData';
@@ -23,14 +23,19 @@ const weatherData = [
 ];
 
 function App() {
-  const [searchTerm, setSearchTerm] = useState('Stockton, CA');
+  const persistedLocation = localStorage.getItem('searchTerm');
+  const [searchTerm, setSearchTerm] = useState
+  (persistedLocation || 'Stockton, CA');
   function handleChange(event) {
     setSearchTerm(event.target.value);
   }
   function handleSubmit(event) {
     event.preventDefault();
-    console.log('Submitting')
+    console.log('Submitting');
   }
+  useEffect(() => {
+    localStorage.setItem('searchTerm', searchTerm);
+  }, [searchTerm]);
   return (
     <div id='main' className="container">
       {/* Search Bar Component */}
