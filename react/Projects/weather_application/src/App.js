@@ -40,9 +40,11 @@ function App() {
     <div id='main' className="container">
       {/* Search Bar Component */}
       <SearchBar handleSubmit={handleSubmit} searchTerm=
-      {searchTerm} handleChange={handleChange}/>
+      {searchTerm} handleChange={handleChange} id={'search-city'}>
+        <strong>Search City: {searchTerm}</strong>
+      </SearchBar>
       {/* Iterating through array */}
-      <WeatherData list={weatherData} searchTerm={searchTerm}/>
+      <WeatherData list={weatherData}/>
     </div>
   );
 }
