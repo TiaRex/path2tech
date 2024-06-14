@@ -6,7 +6,7 @@ function SearchBar({ handleSubmit, searchTerm, handleChange, id, children, isFoc
     if(isFocused && inputRef.current){
       inputRef.current.focus();
     }
-  }, []);
+  }, [isFocused]);
   return (
     <section className='search-bar-container'>
       <form onSubmit={handleSubmit}>
