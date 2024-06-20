@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import './App.css';
 import SearchBar from './components/SearchBar';
 import WeatherData from './components/WeatherData';
@@ -10,30 +10,31 @@ function App() {
   const [weatherData, setWeatherData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [city, setCity] = useState(searchTerm);
+  const fetchDataCallback = useCallback(async() => {
+    try {
+      setLoading(true);
+      const response = await getWeatherData(city);
+      setWeatherData(response.data.list);
+      setLoading(false);
+    } catch {
+      setError(true);
+      setLoading(false);
+    }
+  },[city]);
   function handleChange(event) {
     setSearchTerm(event.target.value);
   }
   function handleSubmit(event) {
     event.preventDefault();
-    console.log('Submitting');
+    setCity(searchTerm);
   }
   useEffect(() => {
     localStorage.setItem('searchTerm', searchTerm);
   }, [searchTerm]);
   useEffect(() => {
-    async function fetchData() {
-      try {
-        setLoading(true);
-        const response = await getWeatherData();
-        console.log(response.data.list);
-        setWeatherData(response.data.list);
-        setLoading(false);
-      } catch {
-        setError(true);
-      }
-    }
-    fetchData();
-  }, []);
+    fetchDataCallback();
+  }, [fetchDataCallback]);
   return (
     <div id='main' className={"container"}>
       {/* Search Bar Component */}
