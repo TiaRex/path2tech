@@ -45,13 +45,22 @@ app.post('/notes', async (req, res) => {
 });
 
 app.put('/notes/:id', async (req, res) => {
-  console.log(req.body);
-  console.log(req.params.id);
-  res.status(200).json({ message: "Updated task" });
+  try {
+    const noteId = req.params.id;
+    const updatedNote = req.body;
+    const note = await NoteModel.findByIdAndUpdate(noteId, updatedNote, { new: true });
+    if(!note) {
+      res.status(404).json({ message: 'Note not found'});
+    }
+    res.status(200).json({ data: note });
+  }catch(error){
+    res.status(500).json({ error: error.message });
+  }
 })
 
-app.delete('notes/:id', async (req, res) => {
-
+app.delete('/notes/:id', async (req, res) => {
+  console.log(req.params.id);
+  res.status(200).json({ message: 'Removed Task' });
 });
 
 app.listen(PORT, () => {
