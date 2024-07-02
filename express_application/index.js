@@ -23,6 +23,10 @@ app.get('/', (req, res) => {
   res.send('Hello World')
 });
 
+app.get('/notes', async (req, res) => {
+  res.json({message: 'Here are your notes'});
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
