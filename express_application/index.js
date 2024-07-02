@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = process.env.PORT || 3500;
 const database_url = process.env.DATABASE_URL;
+const { NoteModel } = require('./schema/Note');
 
 // Connect to MongoDB
 mongoose.connect(database_url, { useNewUrlParser: true, useUnifiedTopology: true}).
@@ -20,22 +21,33 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
 
 app.get('/', (req, res) => {
-  res.send('Hello World')
+  console.log(req.query);
+  res.send('Hello World');
 });
 
 app.get('/notes', async (req, res) => {
-  res.json({message: 'Here are your notes'});
+  try {
+    const notes = await NoteModel.find();
+    res.status(200).json({ data: notes });
+  }catch(error){
+    res.status(500).json({ error: error.message });
+  }
 })
 
 app.post('/notes', async (req, res) => {
-  console.log(req.body);
-  res.status(200).json({message: 'Creating a new note'});
+  try {
+    const note = new NoteModel(req.body);
+    const savedNote = await note.save();
+    res.status(200).json({ data: savedNote });
+  }catch(error){
+    res.status(500).json({ error: error.message });
+  }
 });
 
 app.put('/notes/:id', async (req, res) => {
   console.log(req.body);
   console.log(req.params.id);
-  res.json({message: "Update note"});
+  res.status(200).json({ message: "Updated task" });
 })
 
 app.delete('notes/:id', async (req, res) => {
