@@ -27,6 +27,21 @@ app.get('/notes', async (req, res) => {
   res.json({message: 'Here are your notes'});
 })
 
+app.post('/notes', async (req, res) => {
+  console.log(req.body);
+  res.status(200).json({message: 'Creating a new note'});
+});
+
+app.put('/notes/:id', async (req, res) => {
+  console.log(req.body);
+  console.log(req.params.id);
+  res.json({message: "Update note"});
+})
+
+app.delete('notes/:id', async (req, res) => {
+
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
